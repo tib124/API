@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace AnimeAPI.Migrations
+namespace API.Migrations
 {
     /// <inheritdoc />
     public partial class v1 : Migration

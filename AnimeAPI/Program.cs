@@ -1,5 +1,5 @@
-using AnimeAPI.Models;
-using AnimeAPI.Models.Context;
+using API.Models;
+using API.Models.Context;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +16,7 @@ builder.Services.AddDbContext<AnimeDbContext>(options =>
     options.UseSqlite(@"Data Source=Animes.sqlite");
 });
 builder.Services.AddScoped<IAnimesRepository, AnimeRepository>();
+builder.Services.AddScoped<IMovieRepository, MoviesRepository>();
 
 var app = builder.Build();
 
