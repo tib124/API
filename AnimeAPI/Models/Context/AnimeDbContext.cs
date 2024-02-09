@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using API.Models.Classes;
+using Microsoft.EntityFrameworkCore;
 
-namespace AnimeAPI.Models.Context
+namespace API.Models.Context
 {
     public class AnimeDbContext : DbContext
     {
@@ -10,5 +11,7 @@ namespace AnimeAPI.Models.Context
         }
 
         public DbSet<Anime> Animes { get; set; }    
+        public DbSet<Movies> Movies { get; set; }
+        public DbSet<Actors> Actors { get; set; }
     }
 }

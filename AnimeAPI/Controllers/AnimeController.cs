@@ -1,8 +1,9 @@
-﻿using AnimeAPI.Models;
+﻿using API.Models;
+using API.Models.Classes;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AnimeAPI.Controllers
+namespace API.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
@@ -84,13 +85,6 @@ namespace AnimeAPI.Controllers
                 {
                     return NotFound("Id Not Found");
                 }
-
-                //var sameAnime = await _animesresp.VeryfyName(anime);
-
-                //if (sameAnime != null)
-                //{
-                //    return BadRequest("Anime's name Alredy Exist");
-                //}
 
                 return await _animesresp.UpdateAnime(anime);
             }

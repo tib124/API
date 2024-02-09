@@ -1,10 +1,11 @@
 ﻿
-using AnimeAPI.Models.Context;
+using API.Models.Classes;
+using API.Models.Context;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 using System.Xml.Linq;
 
-namespace AnimeAPI.Models
+namespace API.Models
 {
     public class AnimeRepository : IAnimesRepository
     {

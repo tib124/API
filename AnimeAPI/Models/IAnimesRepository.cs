@@ -1,4 +1,6 @@
-﻿namespace AnimeAPI.Models
+﻿using API.Models.Classes;
+
+namespace API.Models
 {
     public interface IAnimesRepository
     {
